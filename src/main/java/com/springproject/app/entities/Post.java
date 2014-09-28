@@ -44,11 +44,12 @@ public class Post {
 	}
 
 	public Date getPostDate() {
+
 		return postDate;
 	}
 
-	public void setPostDate(Date postDate) {
-		this.postDate = postDate;
+	public void setPostDate(Date date) {
+		this.postDate = date;
 	}
 
 	public String getImagem() {
@@ -58,13 +59,17 @@ public class Post {
 	public void setImagem(String imagem) {
 		Imagem = imagem;
 	}
- 
-	public void  mostra() {
+
+	public void mostra() {
+
 		String mensagem = "";
-		mensagem+="Título do Post: " + this.getTitle();
-		mensagem+="\nData do Post: " + this.getPostDate();
-		mensagem+="\nCaminho da Imagem: " + this.getImagem();
-		System.out.println( mensagem );
+		//DateTimeFormatter fmt = DateTimeFormat.forPattern("MMMM, yyyy");
+		 
+
+		mensagem += "Título do Post: " + this.getTitle();
+		mensagem += "\nData do Post: " + this.getPostDate();
+		mensagem += "\nCaminho da Imagem: " + this.getImagem();
+		System.out.println(mensagem);
 	}
 
 }

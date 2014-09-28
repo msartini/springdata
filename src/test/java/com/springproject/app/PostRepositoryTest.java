@@ -1,7 +1,6 @@
 package com.springproject.app;
 
-import java.util.Date;
-
+import org.joda.time.DateTime;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,7 +27,16 @@ public class PostRepositoryTest {
 	@Test
 	public void test() {
 		Post post = new Post();
-		post.setPostDate(new Date());
+		//post.setPostDate(new Date());
+		
+		 
+		DateTime dataPost = new DateTime(2012,1,1,10,45,12);
+		
+		 
+		
+		post.setPostDate(  dataPost.toDate() );
+		
+		
 		post.setTitle("Terceiro Post");
 		post.setImagem("imagem/foto1.png");
 		
